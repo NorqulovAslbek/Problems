@@ -1,0 +1,11 @@
+# Ignore CMake build directory
+cmake-build-debug/
+
+# Ignore External Libraries (if this is a directory in your project)
+External Libraries/
+
+# Ignore Scratches and Consoles (if these are directories in your project)
+Scratches and Consoles/
+
+# Ignore CMakeLists.txt (if you specifically want to ignore it, though usually, it's part of the project)
+CMakeLists.txt
