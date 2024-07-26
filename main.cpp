@@ -159,5 +159,45 @@ int main() {
         cout << arr4[i] << " ";
     }
 
+
+    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 5 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+    //Int tipida massiv berilgan. Massivni juft elementlarini chap qismga, toq
+    // elementlarini ong qismga joylashtiring, bunda sonlar joylashuvi ahamiyatsiz.
+    ///
+    // evenOdd([1, 0, 1, 0, 0, 1, 1]) → [0, 0, 0, 1, 1, 1, 1]
+    // evenOdd([3, 3, 2]) → [2, 3, 3]
+    // evenOdd([2, 2, 2]) → [2, 2, 2]
+    int n5;
+    cout << "n5=";
+    cin >> n5;
+    int arr5[n5];
+    for (int i = 0; i < n5; ++i) {
+        cout << "arr[" << i << "]=";
+        cin >> arr5[i];
+    }
+    for (int i = 0; i < n5; ++i) {
+        cout << arr5[i] << " ";
+    }
+    cout << endl;
+
+
+    for (int i = 0; i < n5; ++i) {
+        if (arr5[i] % 2 == 1) {
+            for (int j = i + 1; j < n5; ++j) {
+                if (arr5[j] % 2 == 0) {
+                    int temp = arr5[i];
+                    arr5[i] = arr5[j];
+                    arr5[j] = temp;
+                }
+            }
+        }
+    }
+
+    for (int i = 0; i < n5; ++i) {
+        cout << arr5[i] << " ";
+    }
+
+
     return 0;
 }
