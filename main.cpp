@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 1- masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    // //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 1- masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     // Int tipida massiv va n soni berilgan. Agar massivdagi elementdan 1ta oldingi va
     // 1ta keyingi elementlar shu elementga teng bolmasa, shu elementni “yolg’iz”
     // element deylik. Massivda barcha yolgiz elementlarni qoshni elementlarini kattasi
@@ -57,7 +57,7 @@ int main() {
     }
 
 
-    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 2 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    // //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 2 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     // Int tipida massiv va n soni berilgan. Massivni birinchi n ta elementlar gruppasi
     // oxirgi n ta elementlar grupasiga teng bolsa true qaytaring. Bunda n ni oraligi 0
     // dan massivni uznuligigacha.
@@ -84,6 +84,46 @@ int main() {
         }
     }
     cout << "Natija:" << boolalpha << result << endl;
+
+
+    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+    // int tipida massiv berilgan. Massivdagi barcha 0 sonlarini shu 0 ni o’ng qismida
+    // uchraydigan eng katta toq son bilan almashtiring. Agar eng katta toq son
+    // uchramasa, 0 ni shunday qoldiring.
+    //
+    // zeroMax([0, 5, 0, 3]) → [5, 5, 3, 3]
+    // zeroMax([0, 4, 0, 3]) → [3, 4, 3, 3]
+    // zeroMax([0, 1, 0]) → [1, 1, 0]
+
+    int n3;
+    cout << "n3=";
+    cin >> n3;
+    int arr3[n3];
+    for (int i = 0; i < n3; ++i) {
+        cout << "arr3[" << i << "]=";
+        cin >> arr3[i];
+    }
+
+    for (int i = 0; i < n3; ++i) {
+        cout << arr3[i] << " ";
+    }
+
+    for (int i = 0; i < n3; ++i) {
+        if (arr3[i] == 0) {
+            int maxToq = arr3[i];
+            for (int j = i + 1; j < n3; ++j) {
+                if (maxToq < arr3[j] && arr3[j] % 2 == 1) {
+                    maxToq = arr3[j];
+                }
+            }
+            arr3[i] = maxToq;
+        }
+    }
+    cout << endl;
+    for (int i = 0; i < n3; ++i) {
+        cout << arr3[i] << " ";
+    }
 
 
     return 0;
