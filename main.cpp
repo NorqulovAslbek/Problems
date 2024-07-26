@@ -57,7 +57,7 @@ int main() {
     }
 
 
-    // //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 2 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    // // //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 2 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     // Int tipida massiv va n soni berilgan. Massivni birinchi n ta elementlar gruppasi
     // oxirgi n ta elementlar grupasiga teng bolsa true qaytaring. Bunda n ni oraligi 0
     // dan massivni uznuligigacha.
@@ -86,7 +86,7 @@ int main() {
     cout << "Natija:" << boolalpha << result << endl;
 
 
-    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    // //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
     // int tipida massiv berilgan. Massivdagi barcha 0 sonlarini shu 0 ni o’ng qismida
     // uchraydigan eng katta toq son bilan almashtiring. Agar eng katta toq son
@@ -125,6 +125,39 @@ int main() {
         cout << arr3[i] << " ";
     }
 
+    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 4 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    // Int tipida massiv berilgan. Massivdagi barcha 10 sonlarini olib tashlang va qolgan
+    // sonlarni iloji boricha chaproqqa suring. Massiv oxirida qolgan bosh joylarni 0
+    // bilan toldiring.
+    // withoutTen([1, 10, 10, 2]) → [1, 2, 0, 0]
+    // withoutTen([10, 2, 10]) → [2, 0, 0]
+    // withoutTen([1, 99, 10]) → [1, 99, 0]
+
+    int n4;
+    cout << "n4=";
+    cin >> n4;
+    int arr4[n4];
+    for (int i = 0; i < n4; ++i) {
+        cout << "arr4[" << i << "]=";
+        cin >> arr4[i];
+    }
+    for (int i = 0; i < n4; ++i) {
+        cout << arr4[i] << " ";
+    }
+    int index4 = 0;
+    for (int i = 0; i < n4; ++i) {
+        if (arr4[i] != 10) {
+            arr4[index4++] = arr4[i];
+        }
+    }
+
+    while (index4 < n4) {
+        arr4[index4++] = 0;
+    }
+    cout << endl;
+    for (int i = 0; i < n4; ++i) {
+        cout << arr4[i] << " ";
+    }
 
     return 0;
 }
