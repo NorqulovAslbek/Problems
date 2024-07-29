@@ -215,7 +215,26 @@ int main() {
     //  Str satr berilgan. str satrda “pdp” so’zi nechanchi indexda uchrashini aniqlab
     // qiymat sifatida qaytaruvchi funksiya tuzing. Agar so’z topilmasa -1natija qaytsin.
     // Qidirish funksiyalaridan foydalanilmasin.
-    string str = "Salompdp";
+    string str = "Salompd";
     cout << findPdp(str); // buni funksiyasi tepada yozilgan.
     return 0;
+
+
+    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 7 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+    // S1 va S2 satr berilgan. S2 satrida birinchi uchragan S1 satrni o’chiradigan
+    // dastur tuzing.
+    // str1="salom"
+    // str2="Assalomu Alaykum"
+
+    string str1 = "salom";
+    string str2 = "Assalomu Alaykum";
+    int index = str2.find(str1);
+    if (index >= 0) {
+        str2.erase(index, str1.length());
+    }
+    cout << str2;
+
+
+
 }
