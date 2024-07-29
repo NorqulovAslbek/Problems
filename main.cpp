@@ -1,6 +1,19 @@
 #include <iostream>
 using namespace std;
 
+int findPdp(string str) {
+    int index = -1;
+    if (str.length() < 3) {
+        return index;
+    }
+    for (int i = 0; i <= str.length() - 3; ++i) {
+        if (str[i] == 'p' && str[i + 1] == 'd' && str[i + 2] == 'p') {
+            return i;
+        }
+    }
+    return index;
+}
+
 int main() {
     // //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 1- masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     // Int tipida massiv va n soni berilgan. Agar massivdagi elementdan 1ta oldingi va
@@ -198,6 +211,11 @@ int main() {
         cout << arr5[i] << " ";
     }
 
-
+    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 6 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    //  Str satr berilgan. str satrda “pdp” so’zi nechanchi indexda uchrashini aniqlab
+    // qiymat sifatida qaytaruvchi funksiya tuzing. Agar so’z topilmasa -1natija qaytsin.
+    // Qidirish funksiyalaridan foydalanilmasin.
+    string str = "Salompdp";
+    cout << findPdp(str); // buni funksiyasi tepada yozilgan.
     return 0;
 }
