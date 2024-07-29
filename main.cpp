@@ -14,6 +14,22 @@ int findPdp(string str) {
     return index;
 }
 
+bool equality(string str) {
+    int c = 0;
+    int p = 0;
+    for (int i = 0; i < str.length(); ++i) {
+        if (i >= 2) {
+            if (str[i - 2] == 'c' && str[i - 1] == '+' && str[i] == '+') {
+                c++;
+            }
+            if (str[i - 2] == 'p' && str[i - 1] == 'd' && str[i] == 'p') {
+                p++;
+            }
+        }
+    }
+    return (c == p);
+}
+
 int main() {
     // //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 1- masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     // Int tipida massiv va n soni berilgan. Agar massivdagi elementdan 1ta oldingi va
@@ -235,6 +251,9 @@ int main() {
     }
     cout << str2;
 
-
-
+    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 7 -masala @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    //Satr berilgan. Shu satrda “pdp” va “c++” so’zlari teng miqdorda uchrasa, true
+    //qaytaring.
+    string str7 = "1pdp1cadoc++";
+    cout << boolalpha << equality(str7);
 }
